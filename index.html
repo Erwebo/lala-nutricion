@@ -310,8 +310,17 @@
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 
-    .nav-logo { display: flex; align-items: center; gap: 10px; }
-    .nav-logo-icon { height: 26px; width: auto; flex-shrink: 0; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; min-width: 0; flex-shrink: 1; }
+    .nav-logo-icon {
+      height: 26px; width: auto;
+      max-width: 230px;
+      flex-shrink: 1;
+      object-fit: contain; object-position: left center;
+      display: block;
+    }
+    @media (max-width: 640px) {
+      .nav-logo-icon { height: 22px; max-width: 190px; }
+    }
 
     .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
     .nav-links a { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.06em; color: var(--olive); transition: color 0.3s; position: relative; }
@@ -826,7 +835,7 @@
     <div class="container">
       <div class="nav-inner">
         <a href="#hero" class="nav-logo" aria-label="Inicio · Lala Nutrición">
-          <img src="assets/2-crop.png" alt="Laura Araúz · Nutricionista Dietista" class="nav-logo-icon" width="120" height="26" />
+          <img src="assets/2-crop.png" alt="Laura Araúz · Nutricionista Dietista" class="nav-logo-icon" width="230" height="26" />
         </a>
         <ul class="nav-links">
           <li><a href="#sobre" data-i18n="nav.sobre">Sobre Laura</a></li>
@@ -1238,7 +1247,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="assets/2-crop.png" alt="Laura Araúz" width="120" height="20" loading="lazy" />
+          <img src="assets/2-crop.png" alt="Laura Araúz" width="177" height="20" loading="lazy" />
           <p data-i18n="foot.desc">Nutrición sostenible y personalizada en Ciudad de Panamá. Sin restricciones, sin extremos.</p>
         </div>
         <div class="footer-col">
