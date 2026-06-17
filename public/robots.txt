@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lalanutricion.com/sitemap.xml
